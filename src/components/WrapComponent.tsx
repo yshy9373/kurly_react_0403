@@ -199,7 +199,7 @@ export default function WrapComponent(props: any) {
                isTopModal && <ModalComponent topModalState={topModalState} />
             }
 
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Routes>
                     <Route path ='/' element={<HeaderComponent />}>
                         <Route index element={<IntroMainComponent />}/>

@@ -113,7 +113,7 @@ export default function SignUpComponent({회원, isConfirmModalFn, isTimer, intr
         }
         else{ 
             axios({ 
-                url:'http://yshy9373.dothome.co.kr/react_cra_5/member_select.php',
+                url:'https://idealicehee.com/react_cra_5/member_select.php',
                 method:'GET'
             })
             .then((res)=>{
@@ -268,7 +268,7 @@ export default function SignUpComponent({회원, isConfirmModalFn, isTimer, intr
         }
         else {
             axios({
-                url:'http://yshy9373.dothome.co.kr/react_cra_5/member_select.php',
+                url:'https://idealicehee.com/react_cra_5/member_select.php',
                 method:'GET'
             })
             .then((res)=>{
@@ -711,7 +711,7 @@ export default function SignUpComponent({회원, isConfirmModalFn, isTimer, intr
         }
         else{ 
             axios({ // CORS API
-                url:'http://yshy9373.dothome.co.kr/react_cra_5/member_select.php',
+                url:'https://idealicehee.com/react_cra_5/member_select.php',
                 method:'GET'
             })
             .then((res)=>{
@@ -866,7 +866,7 @@ export default function SignUpComponent({회원, isConfirmModalFn, isTimer, intr
         
     
             axios({
-                url:'http://yshy9373.dothome.co.kr/react_cra_5/member_insert.php',
+                url:'https://idealicehee.com/react_cra_5/member_insert.php',
                 method: 'POST',
                 data: newFormData
             })
