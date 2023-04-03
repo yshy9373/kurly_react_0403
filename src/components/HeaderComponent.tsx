@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, Outlet} from 'react-router-dom';
 
-export default function HeaderComponent() {
+export default function HeaderComponent({$path}: any) {
     
     return (
         <>
@@ -45,7 +45,7 @@ export default function HeaderComponent() {
                             <a href="!#" className="search-btn"><img src="./img/header/search.svg" alt="" /></a>
                         </div>
                         <div className="right">
-                            <a href="!#" className="map-btn"><img src="./img/header/map.svg" alt="" />
+                            <a href="!#" className="map-btn"><img src={`${$path}img/header/map.svg`} alt="" />
                                 <div className="tooltip">
                                     <p>
                                         <strong>배송지를 등록</strong>하고
@@ -54,12 +54,12 @@ export default function HeaderComponent() {
                                     </p>
                                     <div className="tooltip-button">
                                         <button type="button" className="login-btn"><span>로그인</span></button>
-                                        <button type="button" className="addr-btn"><span><img src="./img/header/info_search.png"alt="" />주소검색</span></button>
+                                        <button type="button" className="addr-btn"><span><img src={`${$path}img/header/info_search.png`} alt="" />주소검색</span></button>
                                     </div>
                                 </div>
                             </a>
-                            <a href="!#" className="heart-btn"><img src="./img/header/heart.svg" alt="" /></a>
-                            <a href="!#" className="cart-btn"><img src="./img/header/cart.svg" alt="" /></a>
+                            <a href="!#" className="heart-btn"><img src={`${$path}img/header/heart.svg`} alt="" /></a>
+                            <a href="!#" className="cart-btn"><img src={`${$path}img/header/cart.svg`} alt="" /></a>
                         </div>
                     </div>
                 </div>

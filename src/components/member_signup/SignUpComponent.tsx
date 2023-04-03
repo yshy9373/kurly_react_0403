@@ -1,5 +1,6 @@
 import React, { ChangeEvent,  MouseEvent } from 'react';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 
 interface MemberTypes {
@@ -69,7 +70,7 @@ export default function SignUpComponent({회원, isConfirmModalFn, isTimer, intr
 
 
     const [state, setState] = React.useState<MemberTypes>(회원); 
-     
+    const navigate: any = useNavigate(); 
     
     const onChangeId=(e: ChangeEvent<HTMLInputElement>)=>{
 
@@ -113,7 +114,7 @@ export default function SignUpComponent({회원, isConfirmModalFn, isTimer, intr
         }
         else{ 
             axios({ 
-                url:'https://idealicehee.com/react_cra_5/member_select.php',
+                url:'https://idealicehee.com/react_cra_5/member_select.php/',
                 method:'GET'
             })
             .then((res)=>{
@@ -268,7 +269,7 @@ export default function SignUpComponent({회원, isConfirmModalFn, isTimer, intr
         }
         else {
             axios({
-                url:'https://idealicehee.com/react_cra_5/member_select.php',
+                url:'https://idealicehee.com/react_cra_5/member_select.php/',
                 method:'GET'
             })
             .then((res)=>{
@@ -711,7 +712,7 @@ export default function SignUpComponent({회원, isConfirmModalFn, isTimer, intr
         }
         else{ 
             axios({ // CORS API
-                url:'https://idealicehee.com/react_cra_5/member_select.php',
+                url:'https://idealicehee.com/react_cra_5/member_select.php/',
                 method:'GET'
             })
             .then((res)=>{
@@ -866,13 +867,13 @@ export default function SignUpComponent({회원, isConfirmModalFn, isTimer, intr
         
     
             axios({
-                url:'https://idealicehee.com/react_cra_5/member_insert.php',
+                url:'https://idealicehee.com/react_cra_5/member_insert.php/',
                 method: 'POST',
                 data: newFormData
             })
             .then((res)=>{
                 if( res.data.indexOf('성공') !== -1 ){
-                    introMainFn();
+                    navigate("/");
                 }
             })
             .catch((err)=>{

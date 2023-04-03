@@ -201,7 +201,7 @@ export default function WrapComponent(props: any) {
 
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <Routes>
-                    <Route path ='/' element={<HeaderComponent />}>
+                    <Route path ='/' element={<HeaderComponent $path={props.$path}/>}>
                         <Route index element={<IntroMainComponent />}/>
                         <Route path='/신상품' element={<SubMain1Component 신상품={isSub1.신상품}/>}/>
                         <Route path='/베스트' element={<SubMain2Component 베스트={isSub2.베스트}/>}/>
@@ -225,6 +225,7 @@ export default function WrapComponent(props: any) {
 };
 
 WrapComponent.defaultProps = {
+    $path:'./',
     서브1메인: {
         신상품: {
             상품코드 : '',
